@@ -1,0 +1,29 @@
+component
+
+class base
+heavy as comapare to functional
+more functionality
+deal with state
+
+functional base
+light 
+less functionality
+without state
+
+
+function add(a,b){
+    return a+b
+}
+
+const add = (a,b) => {return a+b}
+class
+
+
+
+State=> local variable
+Props=> pass the data
+
+
+
+comp1    props      comp2
+State    =====>     state
