@@ -1,13 +1,32 @@
 import React, {Component} from 'react';
 
 class Header extends Component{
+    constructor(){
+        super()
+
+        this.state={
+            title:'***Logo***',
+            keyword:'No Input'
+        }
+    }
+
+    inputChanges(event){
+        console.log(event.target.value)
+        this.setState({keyword: event.target.value})
+
+    }
+
     render(){
         return(
             <div>
                 <header>
-                    <div className="logo"> Logo </div>
+                    <div className="logo"
+                        onClick={()=>console.log('clicked')}> 
+                            {this.state.title}
+                        </div>
                     <center>
-                        <input />
+                        <input onChange={this.inputChanges.bind(this)}/>
+                        <p>{this.state.keyword}</p>
                     </center>
                 </header>
             </div>
