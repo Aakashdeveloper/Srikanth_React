@@ -1,9 +1,23 @@
 import React from 'react';
 
 const NEWSLIST = (props) => {
-    console.log(props)
+
+    const items = props.newsdata.map((data, index) => {
+        return(
+            <div key={index}>
+                <h2>{index}</h2>
+                <h3>{data.title}</h3>
+                <div>
+                    {data.feed}
+                </div>
+            </div>
+        )
+    })
+
     return(
-        <div>{props.newsdata[0].title} </div>
+        <div>
+        {items} 
+        </div>
     )
 }
 
