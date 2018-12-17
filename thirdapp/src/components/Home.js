@@ -2,8 +2,7 @@ import React, {Component} from 'react';
 
 import Banner from '../components/Banner';
 import ArtistList from '../components/Artist_List';
-
-const URL_ARTIST= 'http://localhost:8900/artists';
+import { REQ_URL } from '../constents/ApiUrl';
 
 class Home extends Component {
     constructor(props){
@@ -15,7 +14,7 @@ class Home extends Component {
     }
 
     componentDidMount(){
-        fetch(URL_ARTIST,{
+        fetch(REQ_URL,{
             method:'GET'
         })
         .then(response =>  response.json())
