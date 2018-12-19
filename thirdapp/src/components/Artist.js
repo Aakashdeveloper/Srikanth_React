@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import { REQ_URL } from '../constents/ApiUrl';
 
-import Header from './Header'
+import Albumlist from './Album_List';
+import Header from './Header';
 
 
 class Artist extends Component {
@@ -36,6 +37,7 @@ class Artist extends Component {
                     <div className="bio">
                         {this.state.artist.bio}
                     </div>
+                    <Albumlist albums={this.state.artist.albums}/>
                 </div>
             </div>
         )
