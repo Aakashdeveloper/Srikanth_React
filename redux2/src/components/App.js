@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Swtich} from 'react-router-dom';
 
 //From Container
-import Home from '../container/Home'
+import Home from '../container/Home';
+import News from '../container/News';
+import GalleryDetail from '../container/GalleryDetail';
 
 //From Component
 import Header from './Header';
@@ -16,7 +18,8 @@ class App extends Component {
           <div>
             <Header/>
               <Route exact path="/" component={Home}/>
-            <Footer/>
+              <Route exact path='/news/:id' component={News}/>
+              <Route exact path="/galleries/:id" component={GalleryDetail}/>
           </div>
       </BrowserRouter>
     );
