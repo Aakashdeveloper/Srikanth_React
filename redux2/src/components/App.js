@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Swtich} from 'react-router-dom';
+import { BrowserRouter, Route} from 'react-router-dom';
 
 //From Container
 import Home from '../container/Home';
@@ -20,6 +20,7 @@ class App extends Component {
               <Route exact path="/" component={Home}/>
               <Route exact path='/news/:id' component={News}/>
               <Route exact path="/galleries/:id" component={GalleryDetail}/>
+            <Footer/>
           </div>
       </BrowserRouter>
     );

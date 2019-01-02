@@ -76,3 +76,23 @@ export function clearSelectedGallery(){
         payload: []
     }
 }
+
+
+////////////
+
+export function handleLikes(array,id,section,type){
+    const output = fetch(`${BaseUrl}/${section}/${id}`,{
+        method: 'PATCH',
+        headers:{
+            'Accept':'application/json',
+            'Content-Type':'application/json'
+        },
+        body: JSON.stringify({likes:array})
+    })
+    .then(response => response.json())
+
+    return{
+        type:type,
+        payload:output
+    }
+}
